@@ -1,0 +1,525 @@
+/* ==========================================
+   SMK Bhakti Nusantara Salatiga
+   Pengumuman Pembagian Kelas 2026/2027
+========================================== */
+
+:root{
+
+    --biru:#0057B8;
+    --biru2:#1E88E5;
+    --kuning:#FFD54F;
+    --kuning2:#FFC107;
+    --putih:#FFFFFF;
+    --abu:#F5F7FA;
+    --teks:#263238;
+    --shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    color:var(--teks);
+
+    background:
+    linear-gradient(135deg,#0057B8 0%,#1976D2 35%,#64B5F6 65%,#FFD54F 100%);
+
+    overflow-x:hidden;
+
+}
+
+/* Background */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,.25),
+    transparent 40%),
+
+    radial-gradient(circle at bottom left,
+    rgba(255,255,255,.18),
+    transparent 45%);
+
+    z-index:-1;
+
+}
+
+/* HEADER */
+
+header{
+
+    text-align:center;
+
+    padding:40px 20px 25px;
+
+    color:white;
+
+}
+
+.logo{
+
+    width:110px;
+
+    margin-bottom:15px;
+
+    filter:drop-shadow(0 5px 10px rgba(0,0,0,.25));
+
+}
+
+header h2{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+header h1{
+
+    margin-top:8px;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    line-height:1.3;
+
+}
+
+header h3{
+
+    margin-top:8px;
+
+    font-size:18px;
+
+    font-weight:400;
+
+}
+
+/* MAIN */
+
+main{
+
+    width:min(900px,92%);
+
+    margin:auto;
+
+}
+
+/* SEARCH CARD */
+
+.search-card{
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.search-card h2{
+
+    color:var(--biru);
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.search-card p{
+
+    color:#555;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+
+}
+
+/* SEARCH */
+
+.search-box{
+
+    display:flex;
+
+    gap:12px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+#searchInput{
+
+    flex:1;
+
+    min-width:250px;
+
+    max-width:550px;
+
+    padding:15px 18px;
+
+    font-size:17px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    background:#F3F7FB;
+
+    transition:.3s;
+
+}
+
+#searchInput:focus{
+
+    background:white;
+
+    box-shadow:0 0 0 3px rgba(0,87,184,.25);
+
+}
+
+#searchBtn{
+
+    padding:15px 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,var(--biru),var(--kuning2));
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#searchBtn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+/* LOADING */
+
+.loading{
+
+    display:none;
+
+    text-align:center;
+
+    margin:25px 0;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* RESULT */
+
+#results{
+
+    margin-top:35px;
+
+}
+
+/* WELCOME CARD */
+
+.welcome-card{
+
+    background:rgba(255,255,255,.92);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.welcome-card .icon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.welcome-card h2{
+
+    color:var(--biru);
+
+    margin-bottom:12px;
+
+}
+
+/* RESULT CARD */
+
+.result-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+    animation:fade .4s ease;
+
+    border-top:10px solid var(--kuning2);
+
+}
+
+.result-card .icon{
+
+    text-align:center;
+
+    font-size:70px;
+
+}
+
+.result-card h2{
+
+    text-align:center;
+
+    color:var(--biru);
+
+    margin:18px 0 35px;
+
+    font-size:30px;
+
+}
+
+.result-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.result-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.label{
+
+    font-weight:600;
+
+    color:#666;
+
+}
+
+.value{
+
+    font-weight:700;
+
+    color:#222;
+
+    text-align:right;
+
+}
+
+/* NOT FOUND */
+
+.not-found{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.not-found h2{
+
+    color:#D32F2F;
+
+    margin-bottom:12px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:60px;
+
+    text-align:center;
+
+    color:white;
+
+    padding:25px;
+
+    font-size:14px;
+
+}
+
+/* ANIMATION */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+
+padding-top:30px;
+
+}
+
+.logo{
+
+width:85px;
+
+}
+
+header h1{
+
+font-size:24px;
+
+}
+
+header h2{
+
+font-size:16px;
+
+}
+
+header h3{
+
+font-size:15px;
+
+}
+
+.search-card{
+
+padding:25px;
+
+}
+
+.search-card h2{
+
+font-size:22px;
+
+}
+
+#searchInput{
+
+width:100%;
+
+}
+
+#searchBtn{
+
+width:100%;
+
+}
+
+.result-card{
+
+padding:25px;
+
+}
+
+.result-card h2{
+
+font-size:23px;
+
+}
+
+.result-item{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:5px;
+
+}
+
+.value{
+
+text-align:left;
+
+}
+
+}
