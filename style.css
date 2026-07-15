@@ -358,20 +358,23 @@ main{
 
 .label{
 
-    font-weight:600;
+    font-size:22px;
 
-    color:#666;
+    font-weight:700;
+
+    color:#555;
 
 }
 
 .value{
 
+    font-size:28px;
+
     font-weight:700;
 
-    color:#222;
+    color:#0057B8;
 
     text-align:right;
-
 }
 
 /* NOT FOUND */
